@@ -1,0 +1,19 @@
+<div class="grid bm-8 pt-2">
+  <div class="col-12">
+    <!-- Información del perfil -->
+    <twitClone-user-information [user]="user"></twitClone-user-information>
+  </div>
+  <div class="col-12">
+    <h2>Posts</h2>
+    <p-divider></p-divider>
+  </div>
+  <div class="col-12">
+    <div  *ngFor="let twit of twits"
+          class="col-12">
+      <twitClone-twit-card [twit]="twit" [user]="user" ></twitClone-twit-card>
+    </div>
+  </div>
+</div>
+
+
+

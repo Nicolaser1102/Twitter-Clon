@@ -1,0 +1,117 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "Nicolás Mora",
+      "nickname": "notnicolaser",
+      "description": "Cooldown tu padre chaval 😡",
+      "creationAccountDate": "Tue, 19 Aug 1975 23:15:30 GMT",
+      "n_followers": 0,
+      "n_followed": 0,
+      "profilePicture": "https://i.pinimg.com/474x/cd/2b/4f/cd2b4f7a8166b3925aeedff173fa28f6.jpg",
+      "coverPicture": "https://i.pinimg.com/originals/92/bf/eb/92bfebd9aaba0f18e7a3b2646675b256.jpg",
+      "followers": []
+    },
+    {
+      "id": "2",
+      "username": "Peepo Marquéz",
+      "nickname": "peeposhy",
+      "description": "Descripción guapa",
+      "creationAccountDate": "Tue, 19 Aug 1975 23:15:30 GMT",
+      "n_followers": 0,
+      "n_followed": 0,
+      "profilePicture": "https://ih1.redbubble.net/image.2617803427.7305/st,small,845x845-pad,1000x1000,f8f8f8.jpg",
+      "coverPicture": "https://i.pinimg.com/originals/76/f4/12/76f412ce163b759c42ea60d399ab79e2.jpg",
+      "followers": [
+        {
+          "id": "1",
+          "username": "Nicolás Mora",
+          "nickname": "notnicolaser",
+          "description": "Cooldown tu padre chaval 😡",
+          "creationAccountDate": "Tue, 19 Aug 1975 23:15:30 GMT",
+          "n_followers": 0,
+          "n_followed": 0,
+          "profilePicture": "https://i.pinimg.com/474x/cd/2b/4f/cd2b4f7a8166b3925aeedff173fa28f6.jpg",
+          "coverPicture": "https://i.pinimg.com/originals/92/bf/eb/92bfebd9aaba0f18e7a3b2646675b256.jpg",
+          "followers": []
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "username": "Emilio Erre",
+      "nickname": "elmishor",
+      "description": "Ou es el top enemigo",
+      "creationAccountDate": "Tue, 30 Aug 1975 23:15:30 GMT",
+      "n_followers": 0,
+      "n_followed": 0,
+      "profilePicture": "https://phantom-marca.unidadeditorial.es/fdde2424bf4b414e60e0207d35ae1e8b/crop/189x0/1158x646/resize/828/f/jpg/assets/multimedia/imagenes/2022/11/09/16680061932060.jpg",
+      "coverPicture": "https://static-cdn.jtvnw.net/jtv_user_pictures/11f5dfe0-fb60-478f-bf38-3df90d018232-profile_banner-480.png",
+      "followers": [
+        {
+          "id": "2",
+          "username": "Peepo Marquéz",
+          "nickname": "peeposhy",
+          "description": "Descripción guapa",
+          "creationAccountDate": "Tue, 19 Aug 1975 23:15:30 GMT",
+          "n_followers": 0,
+          "n_followed": 0,
+          "profilePicture": "https://ih1.redbubble.net/image.2617803427.7305/st,small,845x845-pad,1000x1000,f8f8f8.jpg",
+          "coverPicture": "https://i.pinimg.com/originals/76/f4/12/76f412ce163b759c42ea60d399ab79e2.jpg",
+          "followers": [
+            {
+              "id": "1",
+              "username": "Nicolás Mora",
+              "nickname": "notnicolaser",
+              "description": "Cooldown tu padre chaval 😡",
+              "creationAccountDate": "Tue, 19 Aug 1975 23:15:30 GMT",
+              "n_followers": 0,
+              "n_followed": 0,
+              "profilePicture": "https://i.pinimg.com/474x/cd/2b/4f/cd2b4f7a8166b3925aeedff173fa28f6.jpg",
+              "coverPicture": "https://i.pinimg.com/originals/92/bf/eb/92bfebd9aaba0f18e7a3b2646675b256.jpg",
+              "followers": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "twits": [
+    {
+      "id": "1",
+      "id_user": "1",
+      "text": "Este es un twit de la base de datos",
+      "date": "Tue, 8 Aug 1975 23:15:30 GMT"
+    },
+    {
+      "id": "2",
+      "id_user": "1",
+      "text": "Este es un 2do twit de Nicolás",
+      "date": "Tue, 10 Aug 1975 23:15:30 GMT"
+    },
+    {
+      "id": "3",
+      "id_user": "2",
+      "text": "Este es un twit de Peepo",
+      "date": "Tue, 13 Aug 1975 23:15:30 GMT"
+    },
+    {
+      "id": "vvTglhK",
+      "id_user": "1",
+      "text": "Hey hey",
+      "date": "2023-11-09T16:01:23.708Z"
+    },
+    {
+      "id": "huuJ1hf",
+      "id_user": "2",
+      "text": "Soy Peepo y este es mi segundo twit uwu",
+      "date": "2023-11-09T18:19:11.555Z"
+    },
+    {
+      "id": "jEo8ObE",
+      "id_user": "3",
+      "text": "Hola soy elmejorsito",
+      "date": "2023-11-11T00:45:25.752Z"
+    }
+  ]
+}

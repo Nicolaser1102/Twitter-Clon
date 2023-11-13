@@ -1,0 +1,50 @@
+
+
+
+
+<div class="grid mt-1">
+
+
+  <div class="col-12 md:col-12 lg:col-12">
+    <p-panel  header="Escribe un twit">
+      <div class="flex flex-column sm:flex-row mt-2 align-items-center">
+
+        <div class="w-1 lg:w-1 md:w-12 flex flex-column align-items-center justify-content-center gap-3 py-2">
+            <div class="flex flex-wrap justify-content-center align-items-center pr-0">
+              <p-avatar [image]="currentUser | userProfileImage" styleClass="mr-0 " size="xlarge" shape="circle"></p-avatar>
+            </div>
+        </div>
+
+        <div class="w-full lg:w-1 md:w-1">
+            <p-divider layout="vertical" styleClass="hidden sm:flex"></p-divider>
+            <p-divider layout="horizontal" styleClass="flex sm:hidden" [align]="'center'"></p-divider>
+        </div>
+        <div class="w-full lg:w-12 md:w-12 justify-content-between flex-wrap">
+          <form [formGroup]="twitForm" (ngSubmit)="onSubmit()">
+            <div class="flex align-items-center justify-content-center">
+              <span class="p-float-label">
+                <textarea id="float-input" rows="6" cols="60 md:40" pInputTextarea formControlName="text"
+                  required class="w-12"></textarea>
+                <label for="float-input">¿¡Qué está pasando!?</label>
+              </span>
+            </div>
+          </form>
+          <div class="flex align-items-center justify-content-center">
+            <shared-annexes-menu></shared-annexes-menu>
+            <span class="spacer w-1"></span>
+            <p-toast position="bottom-center" key="bc"></p-toast>
+            <p-button label="Postear" icon="pi pi-check" styleClass="w-auto" (click)="onSubmit()"></p-button>
+          </div>
+        </div>
+
+      </div>
+    </p-panel>
+  </div>
+  <div class="col-12 md:col-12 lg:col-12">
+    <div  *ngFor="let twit of twits"
+          class="col-12">
+      <twitClone-twit-card [twit]="twit" [user]="user"></twitClone-twit-card>
+    </div>
+  </div>
+
+</div>

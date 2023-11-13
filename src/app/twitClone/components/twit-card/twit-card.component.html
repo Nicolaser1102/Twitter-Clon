@@ -1,0 +1,38 @@
+
+  <div class="col-12">
+      <p-card [header]="user!.username">
+      <div class="flex flex-column sm:flex-row mt-2 align-items-center">
+
+        <div class="w-1 lg:w-1 md:w-1 flex flex-column align-items-center justify-content-center">
+
+              <p-avatar [image]="user! | userProfileImage" styleClass="mr-0" size="xlarge" shape="circle"></p-avatar>
+
+        </div>
+
+        <div class="w-full lg:w-1 md:w-1">
+            <p-divider layout="vertical" styleClass="hidden sm:flex"></p-divider>
+            <p-divider layout="horizontal" styleClass="flex sm:hidden" [align]="'center'"></p-divider>
+        </div>
+        <div class="w-full lg:w-10 md:w-10 justify-content-between flex-wrap">
+          <div class="flex row align-items-center justify-content-center p-0">
+            <p class="">
+              {{twit.text}}
+            </p>
+          </div>
+          <div class="flex row align-items-center justify-content-center pt-3">
+            <span class="spacer w-1 pr-2"> {{twit.date | date: 'short'}}</span>
+            <p-selectButton [options]="justifyOptions" [multiple]="true" optionLabel="icon">
+              <ng-template let-item pTemplate>
+                  <i [class]="item.icon"></i>
+              </ng-template>
+          </p-selectButton>
+
+          </div>
+        </div>
+      </div>
+
+
+
+      </p-card>
+    </div>
+

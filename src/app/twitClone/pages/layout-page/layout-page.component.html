@@ -1,0 +1,59 @@
+  <div class="grid">
+    <div class="col-12 md:col-4 lg:col-4">
+      <div class="card flex justify-content-center col-12">
+        <p-card>
+            <div class="flex align-items-center justify-content-center p-0">
+              <img alt="Card" src="assets/gorjeo.png" width="50px"/>
+            </div>
+          <div class="w-full lg:w-12 md:w-12 justify-content-center">
+          <shared-menu class="flex card mt-1"></shared-menu>
+          </div>
+        </p-card>
+      </div>
+
+      <!-- Contactos sugeridos para seguir -->
+      <div class="card flex justify-content-center align-items-center col-12">
+
+        <p-card header="Contactos sugeridos">
+          <div class="grid" *ngFor="let user of suggestions;">
+            <div class="col-2 pl-1">
+              <p-avatar [image]="user! | userProfileImage" styleClass="mr-2 mt-0" size="large" shape="circle"></p-avatar>
+            </div>
+            <div class="col-6 pr-0 pl-3">
+              <div class="row text-white">
+                {{user!.username}}
+              </div>
+
+              <div class="row text-600">
+                <span>@</span>{{user!.nickname}}
+              </div>
+            </div>
+            <div class="col-4 pl-0 pr-0">
+              <div class="card flex justify-content-center">
+                <p-toast position="top-left" key="tl"></p-toast>
+                  <form [formGroup]="formGroup">
+                    <!-- Usuario que aún no sigue -->
+                    <p-toggleButton *ngIf="verificarUser(user) else alreadyFollow" formControlName="notFollowed" onLabel="Seguir" offLabel="Siguiendo" (click)="followSuggestion(user)" ></p-toggleButton>
+
+                    <!-- Usuario ya seguido -->
+                    <ng-template #alreadyFollow><p-toggleButton formControlName="alreadyFollowed" onLabel="Seguir" offLabel="Siguiendo"  ></p-toggleButton></ng-template>
+
+                  </form>
+              </div>
+            </div>
+          </div>
+        </p-card>
+
+    </div>
+    </div>
+    <div class="col-12 md:col-7 lg:col-7">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="col-12 md:col-1 lg:col-1 justify-content-center mt-2 pr-3" >
+      <h2>Buscar</h2>
+      <shared-search-box></shared-search-box>
+      <p-divider></p-divider>
+    </div>
+
+  </div>
