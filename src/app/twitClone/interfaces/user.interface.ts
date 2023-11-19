@@ -14,6 +14,8 @@ export interface User {
   coverPicture: string;
   twits: Twit[];
   followers: User[];
+  email: string;
+  password: string;
 }
 
 

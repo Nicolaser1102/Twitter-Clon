@@ -10,7 +10,9 @@
       "n_followed": 0,
       "profilePicture": "https://i.pinimg.com/474x/cd/2b/4f/cd2b4f7a8166b3925aeedff173fa28f6.jpg",
       "coverPicture": "https://i.pinimg.com/originals/92/bf/eb/92bfebd9aaba0f18e7a3b2646675b256.jpg",
-      "followers": []
+      "followers": [],
+      "email": "nicolas@hotmail.com",
+      "password":"@nicolaser"
     },
     {
       "id": "2",
@@ -35,7 +37,9 @@
           "coverPicture": "https://i.pinimg.com/originals/92/bf/eb/92bfebd9aaba0f18e7a3b2646675b256.jpg",
           "followers": []
         }
-      ]
+      ],
+      "email": "peepo@hotmail.com",
+      "password":"peeposhy1234"
     },
     {
       "id": "3",
@@ -72,8 +76,22 @@
               "followers": []
             }
           ]
+        },
+        {
+          "id": "1",
+          "username": "Nicolás Mora",
+          "nickname": "notnicolaser",
+          "description": "Cooldown tu padre chaval 😡",
+          "creationAccountDate": "Tue, 19 Aug 1975 23:15:30 GMT",
+          "n_followers": 0,
+          "n_followed": 0,
+          "profilePicture": "https://i.pinimg.com/474x/cd/2b/4f/cd2b4f7a8166b3925aeedff173fa28f6.jpg",
+          "coverPicture": "https://i.pinimg.com/originals/92/bf/eb/92bfebd9aaba0f18e7a3b2646675b256.jpg",
+          "followers": []
         }
-      ]
+      ],
+      "email": "elmillor@hotmail.com",
+      "password": "12345678"
     }
   ],
   "twits": [

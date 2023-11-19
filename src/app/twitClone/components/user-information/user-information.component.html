@@ -28,10 +28,10 @@
               </div>
             </div>
             <div class="col-12 allign-items-center justify-end w-4 p-0">
-              <div class="row text-white font-medium">
+              <div class="row text-white font-medium" [pTooltip]=" followersUsername.toString() ">
               Seguidos: {{ user!.followers.length}}
               </div>
-              <div class="row text-white font-medium">
+              <div class="row text-white font-medium" >
                 Seguidores: {{ user!.n_followers}}
                 </div>
             </div>

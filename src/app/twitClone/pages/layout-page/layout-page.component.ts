@@ -83,6 +83,12 @@ export class LayoutPageComponent implements OnInit{
         return this.switch;
   }
 
+  onLogOut():void{
+    this.authService.logout();
+    this.router.navigate(['/auth/login']);
+  }
+
+
 
   }
 

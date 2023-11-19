@@ -11,7 +11,8 @@ export class AuthService {
   private user?:User;
   private filterUsers: BehaviorSubject<User[]> = new BehaviorSubject<User[]>([]);
   private followingSuuggestions: User[] = [];
-  private baseUrl = 'http://localhost:3000';
+  private baseUrl:string = 'http://localhost:3000';
+  private idUserLogued:string = "3";
 
 
   constructor(private http: HttpClient) { }
@@ -28,7 +29,20 @@ get followingSuggestions(): User[] | undefined{
 
 
 login( email:string, password:string): Observable<User>{
-  return this.http.get<User>(`${this.baseUrl}/users/3`)
+
+
+  this.getUsers().subscribe( users =>{
+
+    users.forEach( user => {
+      if (user.email == email && user.password == password ){
+        this.idUserLogued = user.id
+        console.log("Pasé por aquí y mi valor es:", this.idUserLogued)
+      }
+    })
+  })
+
+
+  return this.http.get<User>(`${this.baseUrl}/users/${this.idUserLogued}`)
   .pipe(
     tap(user => this.user = user),
     tap( user => {
@@ -44,7 +58,7 @@ checkAuthentication():Observable<boolean>  {
 
   const token = localStorage.getItem('token');
 
-  return this.http.get<User>(`${this.baseUrl}/users/3`)
+  return this.http.get<User>(`${this.baseUrl}/users/${this.idUserLogued}`)
   .pipe(
     tap(user => this.user = user),
     //Con el map tranforma el observable user a un observable booleano según si tiene data o no (verdadero o falso)
@@ -82,7 +96,10 @@ addUser(user:User): Observable<User>{
 
 
 
-
+logout():void{
+  localStorage.clear();
+  this.user = undefined;
+}
 
 
 }

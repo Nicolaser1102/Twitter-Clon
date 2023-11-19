@@ -14,12 +14,17 @@ import { User } from '../../interfaces/user.interface';
 export class UserInformationComponent implements OnInit{
 
 
+  followersUsername = [''];
 
   @Input()
   public user?:User;
 
   ngOnInit(): void {
     if (!this.user) throw Error('User property is required');
+
+    this.user.followers.forEach(follower => {
+      this.followersUsername.unshift(follower.username);
+    });
 }
 
 }

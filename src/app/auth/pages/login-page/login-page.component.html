@@ -1,16 +1,24 @@
 <div class="flex flex-column md:flex-row">
   <div class="w-full md:w-5 flex flex-column align-items-center justify-content-center gap-3 py-5">
-      <div class="flex flex-wrap justify-content-center align-items-center gap-2">
+    <form [formGroup]="myLoginForm" (ngSubmit)="onLogin()" autocomplete="off">
+      <div class="flex flex-wrap justify-content-center align-items-center mt-2 gap-2">
           <label class="w-6rem">Username</label>
-          <input pInputText id="username" type="text" class="w-12rem" />
+          <input pInputText id="username" type="text" formControlName="email" pTooltip="Enter your username" class="w-12rem" tooltipPosition="left" required/>
+          <span *ngIf="isValidField('email')" class="form-text text-danger">
+            Este campo es requerido
+        </span>
       </div>
-      <div class="flex flex-wrap justify-content-center align-items-center gap-2">
+      <div class="flex flex-wrap justify-content-center align-items-center mt-2 gap-2">
           <label class="w-6rem">Password</label>
-          <input pInputText id="password" type="password" class="w-12rem" />
+          <input pInputText id="password" type="password" formControlName="password"pTooltip="Enter your password" tooltipPosition="left" class="w-12rem" required />
+          <span *ngIf="isValidField('password')" class="form-text text-danger">
+            Este campo es requerido
+        </span>
       </div>
       <!-- Login Button -->
-      <p-button label="Login" icon="pi pi-user" styleClass="w-10rem mx-auto"
+      <p-button label="Login" icon="pi pi-user" styleClass="w-10rem mx-auto mt-4"
       (click)="onLogin()"></p-button>
+      </form>
   </div>
 
   <div class="w-full md:w-2">
@@ -45,4 +53,3 @@
     </form>
   </div>
 </div>
-

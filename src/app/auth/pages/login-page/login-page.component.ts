@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth-service.service';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MessageService } from 'primeng/api';
 import { User } from 'src/app/twitClone/interfaces/user.interface';
 
@@ -31,6 +31,17 @@ export class LoginPageComponent {
     return user;
   }
 
+  public myLoginForm: FormGroup = new FormGroup({
+    email: new FormControl('',[ Validators.required, Validators.minLength(3)]),
+    password: new FormControl('',[ Validators.required, Validators.minLength(3)]),
+  });
+
+  isValidField(field:string){
+    return this.myLoginForm.controls[field].errors
+    && this.myLoginForm.controls[field].touched;
+  }
+
+
     public myForm: FormGroup = new FormGroup({
       //nombre: Instancia de la clase (Valor por defecto , validaciones sincronas, validaciones Asíncronas)
       // name: new FormControl('', [], []),
@@ -48,10 +59,16 @@ export class LoginPageComponent {
     });
 
 onLogin():void{
-this.authService.login('nicolaser@gmail.com','mazinger')
-.subscribe( user => {
-this.router.navigateByUrl('/')
+
+  if(this.myLoginForm.invalid) {
+    this.myForm.markAllAsTouched();
+    return;
+  }
+  this.authService.login(this.myLoginForm.get('email')!.value, this.myLoginForm.get('password')!.value)
+  .subscribe( user => {
+    this.router.navigateByUrl('/')
 } );
+
 }
 
 onSubmit():void{
@@ -64,6 +81,7 @@ onSubmit():void{
 
 
 }
+
 
 
 }

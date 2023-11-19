@@ -10,7 +10,9 @@
       "n_followed": 0,
       "profilePicture": "https://i.pinimg.com/474x/cd/2b/4f/cd2b4f7a8166b3925aeedff173fa28f6.jpg",
       "coverPicture": "https://i.pinimg.com/originals/92/bf/eb/92bfebd9aaba0f18e7a3b2646675b256.jpg",
-      "followers": []
+      "followers": [],
+      "email": "nicolas@hotmail.com",
+      "password":"@nicolaser"
     },
     {
       "id": "2",
@@ -35,7 +37,9 @@
           "coverPicture": "https://i.pinimg.com/originals/92/bf/eb/92bfebd9aaba0f18e7a3b2646675b256.jpg",
           "followers": []
         }
-      ]
+      ],
+      "email": "peepo@hotmail.com",
+      "password":"peeposhy1234"
     },
     {
       "id": "3",
@@ -85,20 +89,9 @@
           "coverPicture": "https://i.pinimg.com/originals/92/bf/eb/92bfebd9aaba0f18e7a3b2646675b256.jpg",
           "followers": []
         }
-      ]
-    },
-    {
-      "id": "YDHY9AK",
-      "username": "Nuevo usuario",
-      "nickname": "new user",
-      "description": "",
-      "creationAccountDate": "2023-11-12T03:17:45.793Z",
-      "n_followers": 0,
-      "n_followed": 0,
-      "profilePicture": "",
-      "coverPicture": 0,
-      "twits": [],
-      "followers": []
+      ],
+      "email": "elmillor@hotmail.com",
+      "password": "12345678"
     }
   ],
   "twits": [
