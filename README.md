@@ -14,11 +14,13 @@
 ### Dev
 
 1. Clonar el proyecto
-2. Ejecutar ```npm install```
-3. Levantar backend ```npm run backend``` 
-4. Ejecutar la app ```ng serve -o``` o bien ```npm start```
+2. Instalar node .js desde el link: https://nodejs.org/en y/o  verificar su instalación con el comando ```node --version```
+3. Ejecutar ```npm install```
+4. Levantar backend ```npm run backend```
+5. Ejecutar la app ```ng serve -o``` o bien ```npm start```
 
-Pasos 2 a 4: Ejecutar los comandos en el cmd dentro de la ruta/directorio del proyecto  ;) .
+
+Pasos 3 a 4: Ejecutar los comandos en el cmd dentro de la ruta/directorio del proyecto  ;) .
 
 
 ## EN
@@ -36,8 +38,10 @@ Pasos 2 a 4: Ejecutar los comandos en el cmd dentro de la ruta/directorio del pr
 ### Dev
 
 1. Clone the project
-2. Run ```npm install```
-3. Raise backend ```npm run backend```
-4. Run the app ```ng serve -o``` or ```npm start```
+2. Install node .js from the link: https://nodejs.org/en and/or verify its installation with the command ```node --version```
+3. Run ```npm install```
+4. Raise Backend ```npm run backend```
+5. Run the application ```ng save -o``` or ```npm start```
 
-Steps 2 to 4: Run the commands in cmd within the project path/directory ;).
+
+Steps 3 to 4: Run the commands in cmd within the project path/directory ;).
